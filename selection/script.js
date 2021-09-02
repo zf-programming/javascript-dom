@@ -37,11 +37,22 @@
 //   paragraf[i].style.backgroundColor = `lightgreen`;
 // }
 
-// 4. querySelector() -> Element
-// selector seperti CSS
-const h1 = document.querySelector(`h1#judul`);
-h1.innerHTML = `querySelector`;
+// // 4. querySelector() -> Element
+// // selector seperti CSS
+// const h1 = document.querySelector(`h1#judul`);
+// h1.innerHTML = `querySelector`;
 
-const p1 = document.querySelector(`#a p.paragraf.p1`);
-p1.style.backgroundColor = `lightblue`;
-p1.style.fontFamily = `courier new`;
+// const p1 = document.querySelector(`#a p.paragraf.p1`);
+// p1.style.backgroundColor = `lightblue`;
+// p1.style.fontFamily = `courier new`;
+
+// 5. querySelectorAll() -> NodeList
+const paragraf = document.querySelectorAll(`p.paragraf`);
+for (let i = 0; i < paragraf.length; i++) {
+  paragraf[i].style.backgroundColor = `lightseagreen`;
+}
+
+const li = document.querySelectorAll(`section#b ul li`);
+li[0].style.backgroundColor = `blue`;
+li[1].style.backgroundColor = `salmon`;
+li[2].style.backgroundColor = `pink`;
