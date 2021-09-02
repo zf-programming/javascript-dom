@@ -25,14 +25,23 @@
 // const li2 = document.getElementsByTagName(`li`)[1];
 // li2.innerHTML = `Ubah li ke 2`;
 
-// 3. getElementsByClassName() -> HTMLCollection
-const p1 = document.getElementsByClassName(`p1`);
-p1[0].innerHTML = `P1 Javascript`;
+// // 3. getElementsByClassName() -> HTMLCollection
+// const p1 = document.getElementsByClassName(`p1`);
+// p1[0].innerHTML = `P1 Javascript`;
 
-const p2 = document.getElementsByClassName(`p2`)[0];
-p2.innerHTML = `ini Paragraf ke 2`;
+// const p2 = document.getElementsByClassName(`p2`)[0];
+// p2.innerHTML = `ini Paragraf ke 2`;
 
-const paragraf = document.getElementsByClassName(`paragraf`);
-for (let i = 0; i < paragraf.length; i++) {
-  paragraf[i].style.backgroundColor = `lightgreen`;
-}
+// const paragraf = document.getElementsByClassName(`paragraf`);
+// for (let i = 0; i < paragraf.length; i++) {
+//   paragraf[i].style.backgroundColor = `lightgreen`;
+// }
+
+// 4. querySelector() -> Element
+// selector seperti CSS
+const h1 = document.querySelector(`h1#judul`);
+h1.innerHTML = `querySelector`;
+
+const p1 = document.querySelector(`#a p.paragraf.p1`);
+p1.style.backgroundColor = `lightblue`;
+p1.style.fontFamily = `courier new`;
