@@ -46,13 +46,27 @@
 // p1.style.backgroundColor = `lightblue`;
 // p1.style.fontFamily = `courier new`;
 
-// 5. querySelectorAll() -> NodeList
-const paragraf = document.querySelectorAll(`p.paragraf`);
-for (let i = 0; i < paragraf.length; i++) {
-  paragraf[i].style.backgroundColor = `lightseagreen`;
+// // 5. querySelectorAll() -> NodeList
+// const paragraf = document.querySelectorAll(`p.paragraf`);
+// for (let i = 0; i < paragraf.length; i++) {
+//   paragraf[i].style.backgroundColor = `lightseagreen`;
+// }
+
+// const li = document.querySelectorAll(`section#b ul li`);
+// li[0].style.backgroundColor = `blue`;
+// li[1].style.backgroundColor = `salmon`;
+// li[2].style.backgroundColor = `pink`;
+
+// 6. Persempit pencarian selector
+const sectionA = document.getElementById(`a`);
+// p yang ada di sectionA
+const p = sectionA.getElementsByTagName(`p`);
+
+for (let i = 0; i < p.length; i++) {
+  p[i].style.backgroundColor = `purple`;
 }
 
-const li = document.querySelectorAll(`section#b ul li`);
-li[0].style.backgroundColor = `blue`;
-li[1].style.backgroundColor = `salmon`;
-li[2].style.backgroundColor = `pink`;
+const sectionB = document.getElementById(`b`);
+const p2 = sectionB.getElementsByTagName(`p`);
+
+p2[0].innerHTML = `HALO`;
