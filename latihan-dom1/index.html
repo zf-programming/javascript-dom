@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan DOM 1</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+      }
+
+      .container {
+        width: 60%;
+        margin: 50px auto;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: white;
+      }
+
+      .light-sea {
+        background-color: lightseagreen;
+      }
+
+      .kotak {
+        width: 25px;
+        height: 25px;
+        margin: 10px auto;
+      }
+
+      .merah {
+        background-color: red;
+      }
+
+      .hijau {
+        background-color: green;
+      }
+
+      .biru {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Bermain dengan Warna</h1>
+      <h2>Body Color dengan Button</h2>
+      <button type="button" class="btn-1">Ubah Warna</button>
+      <br />
+      <br />
+      <h2>Body Color dengan Slider</h2>
+      <div class="kotak merah"></div>
+      <input type="range" name="sliderMerah" min="0" max="255" value="255" />
+      <div class="kotak hijau"></div>
+      <input type="range" name="sliderHijau" min="0" max="255" value="255" />
+      <div class="kotak biru"></div>
+      <input type="range" name="sliderBiru" min="0" max="255" value="255" />
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
