@@ -1,0 +1,199 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  background-color: #f38ba0;
+  margin: 30px auto;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  grid-template-rows: 0.2fr 2fr;
+  grid-template-areas:
+    "judul judul"
+    "kotak score";
+  gap: 10px;
+}
+
+/* Judul */
+.judul {
+  width: 100%;
+  font-size: 1.2em;
+  padding: 0;
+  grid-area: judul;
+  background-color: #b5eaea;
+  border-radius: 10px;
+}
+
+/* Kotak Content */
+.kotak {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #b5eaea;
+  border-radius: 10px;
+  grid-area: kotak;
+  display: grid;
+  padding: 30px;
+  gap: 30px;
+  grid-template-rows: 1fr 0.2fr 1fr;
+  grid-template-areas:
+    "kotak-bot"
+    "hasil"
+    "kotak-user";
+  justify-items: center;
+}
+
+.kotak h2 {
+  margin: 20px;
+}
+
+.kotak-bot {
+  grid-area: kotak-bot;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.kotak-user {
+  grid-area: kotak-user;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.kotak-hasil {
+  border: 3px solid black;
+  width: 200px;
+  border-radius: 10px;
+}
+
+/* Gambar */
+img {
+  width: 100%;
+}
+
+.gambar,
+.gambar-bot {
+  background-color: gray;
+  border: 5px solid black;
+  border-radius: 50%;
+  padding: 7px;
+  box-sizing: border-box;
+  width: 120px;
+  height: 120px;
+  margin: auto 20px;
+  cursor: pointer;
+}
+
+.gambar:hover {
+  border-color: lawngreen;
+}
+
+/* Score */
+.score {
+  /* border: 3px solid black; */
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #b5eaea;
+  padding: 30px;
+  grid-area: score;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+
+.user-score,
+.bot-score {
+  background-color: #edf6e5;
+  border-radius: 10px;
+}
+
+.riwayat table {
+  background-color: #edf6e5;
+  width: 100%;
+}
+
+.riwayat table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 1fr 0.3fr;
+    grid-template-areas:
+      "judul"
+      "kotak"
+      "score";
+  }
+
+  .judul {
+    font-size: 0.8em;
+  }
+
+  .kotak {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #b5eaea;
+    border-radius: 10px;
+    grid-area: kotak;
+    display: grid;
+    gap: 30px;
+    grid-template-rows: 0.5fr 0.2fr 1fr;
+  }
+
+  .gambar-bot {
+    width: 100px;
+    height: 100px;
+  }
+
+  .kotak-hasil {
+    width: 120px;
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 0.6em;
+  }
+
+  .kotak-hasil h2 {
+    margin: 0;
+  }
+
+  .kotak-user {
+    justify-content: center;
+  }
+
+  .gambar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .score {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr;
+  }
+
+  .bot-score,
+  .user-score {
+    font-size: 0.7em;
+  }
+}
