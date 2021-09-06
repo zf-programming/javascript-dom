@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.container {
+  max-width: 600px;
+  background-color: cadetblue;
+  border: 10px solid coral;
+  margin: 30px auto;
+  display: grid;
+  grid-template-areas:
+    "preview"
+    "thumbnail";
+}
+
+.preview {
+  grid-area: preview;
+}
+
+.thumbnail {
+  grid-area: thumbnail;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: lightsalmon;
+}
+
+.thumb {
+  width: 195px;
+  margin-top: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.thumb:hover {
+  opacity: 0.7;
+}
+
+.thumb:active {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade {
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
